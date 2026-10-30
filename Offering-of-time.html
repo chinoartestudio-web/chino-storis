@@ -1,1 +1,360 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Offering of Time | Chino Art Estudio1</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: white;
+  font-family: Georgia, serif;
+  text-align: center;
+  line-height: 1.8;
+}
+
+header {
+  padding: 35px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.studio {
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #bbb;
+}
+
+main {
+  max-width: 760px;
+  margin: auto;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+p {
+  font-size: 21px;
+}
+
+.artwork {
+  width: 100%;
+  min-height: 280px;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  color: #aaa;
+  margin: 30px 0;
+}
+
+button {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 19px 25px;
+  font-size: 19px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+section {
+  margin: 55px 0;
+}
+
+#experience {
+  display: none;
+}
+
+.story {
+  text-align: left;
+  animation: appear 3s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.price {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.small {
+  font-size: 17px;
+  color: #bbb;
+}
+
+footer {
+  border-top: 1px solid #444;
+  padding: 35px 20px;
+  color: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="studio">CHINO ART ESTUDIO1</div>
+  <div class="subtitle">
+    BEYOND THE CANVAS
+  </div>
+</header>
+
+<main>
+
+<h1>The Offering of Time</h1>
+
+<p>
+Original Artwork · One of a Kind
+</p>
+
+<div class="artwork">
+  Original artwork photograph
+  will appear here.
+</div>
+
+<button onclick="beginExperience()">
+  Begin the Experience
+</button>
+
+<div id="experience">
+
+<section class="story">
+
+<h2>The Story Behind the Artwork</h2>
+
+<p>
+Time, memory, and transformation
+are recurring elements in the
+artistic universe of
+Héctor "Chino" Pérez.
+</p>
+
+<p>
+In The Offering of Time,
+a young figure holds a fish,
+inviting the viewer to reflect
+on the relationship between
+life, time, and the mysteries
+of existence.
+</p>
+
+<p>
+This original artwork belongs
+to the Crónidas series.
+</p>
+
+<p class="small">
+The complete artist's narrative
+will be added here.
+</p>
+
+</section>
+
+<section>
+
+<h2>The Creative Process</h2>
+
+<p>
+Discover the creation
+of this original artwork.
+</p>
+
+<p class="small">
+Photographs of the artist
+working on this piece
+will appear here.
+</p>
+
+</section>
+
+<section>
+
+<h2>Artwork Information</h2>
+
+<p>
+Series: Crónidas
+</p>
+
+<p>
+Technique: Ink, acrylic,
+charcoal, pencil and mixed media
+on Fabriano 300 g paper.
+</p>
+
+<p>
+Dimensions: 22 × 30 inches
+</p>
+
+<p>
+Year: 2026
+</p>
+
+<p>
+Original Artwork · One of a Kind
+</p>
+
+<p>
+Signed and accompanied
+by a Certificate of Authenticity.
+</p>
+
+<p class="price">
+$1,850 USD
+</p>
+
+</section>
+
+<section>
+
+<h2>Meet the Artist</h2>
+
+<p>
+Héctor "Chino" Pérez
+</p>
+
+<p>
+Cuban-born visual artist
+based in Miami, Florida.
+</p>
+
+<p>
+His work explores memory,
+identity, time, and
+the human experience.
+</p>
+
+<p class="small">
+Artist's studio photograph
+will appear here.
+</p>
+
+</section>
+
+<section>
+
+<h2>Chino Art Estudio1</h2>
+
+<p>
+Original Fine Art
+</p>
+
+<p>
+Little Havana · Miami, Florida
+</p>
+
+<p>
+Visit our permanent studio
+at Futurama Gallery.
+</p>
+
+<p class="small">
+Contact information
+will be added after confirmation.
+</p>
+
+</section>
+
+</div>
+
+</main>
+
+<footer>
+CHINO ART ESTUDIO1
+<br>
+Miami, Florida
+<br>
+Beyond the Canvas
+<br>
+© 2026 Chino Art Estudio1
+</footer>
+
+<script>
+let audioContext;
+let oscillators = [];
+
+function beginExperience() {
+  document.getElementById(
+    "experience"
+  ).style.display = "block";
+
+  startMusic();
+
+  document.getElementById(
+    "experience"
+  ).scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function startMusic() {
+  if (audioContext) return;
+
+  const AudioContextClass =
+    window.AudioContext ||
+    window.webkitAudioContext;
+
+  if (!AudioContextClass) return;
+
+  audioContext = new AudioContextClass();
+
+  const master = audioContext.createGain();
+  master.gain.value = 0.025;
+  master.connect(audioContext.destination);
+
+  const notes = [130.81, 196, 261.63];
+
+  notes.forEach(function(frequency) {
+    const oscillator =
+      audioContext.createOscillator();
+
+    const gain = audioContext.createGain();
+
+    oscillator.type = "sine";
+    oscillator.frequency.value = frequency;
+
+    gain.gain.value = 0.25;
+
+    oscillator.connect(gain);
+    gain.connect(master);
+
+    oscillator.start();
+    oscillators.push(oscillator);
+  });
+
+  audioContext.resume();
+}
+</script>
+
+</body>
+</html>
